@@ -89,6 +89,59 @@ window.addEventListener(
 
 updatePopularOrnament();
 
+
+/*Content 2 animation*/
+
+const popularHeader = document.querySelector('.popular__header');
+const categories = document.querySelectorAll('.category');
+
+
+const popularObserver = new IntersectionObserver(
+  (entries) => {
+
+    entries.forEach((entry) => {
+
+      if (!entry.isIntersecting) return;
+
+
+      if (entry.target.classList.contains('popular__header')) {
+
+        entry.target.classList.add('is-visible');
+
+      }
+
+
+      if (entry.target.classList.contains('category')) {
+
+        const index = [...categories].indexOf(entry.target);
+
+        setTimeout(() => {
+          entry.target.classList.add('is-visible');
+        }, index * 120);
+
+      }
+
+
+      popularObserver.unobserve(entry.target);
+
+    });
+
+  },
+  {
+    threshold: .18
+  }
+);
+
+
+if (popularHeader) {
+  popularObserver.observe(popularHeader);
+}
+
+
+categories.forEach(category => {
+  popularObserver.observe(category);
+});
+
 // Для повторного теста анимации в DevTools можно выполнить:
 // hero.classList.remove('hero--animate');
 // requestAnimationFrame(() => hero.classList.add('hero--animate'));
