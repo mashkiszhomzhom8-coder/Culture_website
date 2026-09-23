@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Культурный DIY — Hero</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body>
+
+  <main>
+    <!--
+      Пока боковые коллажи сделаны двумя PNG из нашего референса.
+      На следующем этапе их можно заменить отдельными прозрачными PNG/WebP:
+      рубашка, ваза, сумка, украшение и т.д. Тогда каждый предмет сможет
+      лететь/вращаться/появляться независимо.
+    -->
+    <div class="hero-scene">
+      <section class="hero hero--animate" id="hero">
+        <div class="hero__texture" aria-hidden="true"></div>
+
+        <!-- <img
+          class="hero__decor hero__decor--left fly-item fly-item--left"
+          src="assets/decor-left.png"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <img
+          class="hero__decor hero__decor--right fly-item fly-item--right"
+          src="assets/decor-right.png"
+          alt=""
+          aria-hidden="true"
+        /> -->
+
+        <!-- Декоративные предметы слева -->
+        <div class="hero__decor hero__decor--left">
+
+          <img
+            class="decor-item decor-shirt fly-left"
+            src="assets/shirt.png"
+            alt=""
+          >
+
+          <img
+            class="decor-item decor-pitcher fly-left"
+            src="assets/pitcher.png"
+            alt=""
+          >
+
+          <img
+            class="decor-item decor-bag fly-left"
+            src="assets/bag.png"
+            alt=""
+          >
+
+          <img
+            class="decor-item decor-flowers-left fade-up"
+            src="assets/flowers_left.png"
+            alt=""
+          >
+
+          <img
+            class="decor-item decor-note-history fade-up"
+            src="assets/note_history.png"
+            alt=""
+          >
+
+        </div>
+
+        <div class="hero__content">
+          <div class="hero__ornament" aria-hidden="true">⌁ ✦ ⌁</div>
+          <p class="hero__eyebrow">КУЛЬТУРНЫЙ DIY</p>
+
+          <h1 class="hero__title">
+            <span>СОХРАНЯЙ</span>
+            <span>ТРАДИЦИИ,</span>
+            <em>создавая новое</em>
+          </h1>
+
+          <p class="hero__lead">
+            Идеи, мастер-классы и вдохновение<br />
+            из культур народов России <br />
+            для твоих творческих проектов
+          </p>
+
+          <a class="hero__button" href="#catalog">
+            <span>✦</span>
+            НАЙТИ ИДЕЮ
+            <span>✦</span>
+          </a>
+        </div>
+
+              <!-- Декоративные предметы справа -->
+        <div class="hero__decor hero__decor--right">
+
+          <img
+            class="decor-item decor-photo fly-right"
+            src="assets/mountain_photo.png"
+            alt=""
+          >
+
+          <img
+            class="decor-item decor-jewelry fly-right"
+            src="assets/jewelry.png"
+            alt=""
+          >
+
+          <img
+            class="decor-item decor-flowers-right fade-up"
+            src="assets/flowers_right.png"
+            alt=""
+          >
+
+          <img
+            class="decor-item decor-vase fly-right"
+            src="assets/vase.png"
+            alt=""
+          >
+
+          <img
+            class="decor-item decor-note-traditions fade-up"
+            src="assets/note_traditions.png"
+            alt=""
+          >
+
+        </div>
+
+        <div class="hero__footer" aria-hidden="true">
+          <span>ТУТОРИАЛЫ</span><b>✦</b>
+          <span>НАРОДЫ</span><b>✦</b>
+          <span>РЕМЁСЛА</span><b>✦</b>
+          <span>СОВРЕМЕННОЕ ПРИМЕНЕНИЕ</span>
+        </div>
+
+
+
+      </section>
+
+        <div class="hero-tail" aria-hidden="true"></div>
+
+        
+
+        
+
+
+
+    </div>
+    
+
+
+
+
+
+
+
+
+    <section class="popular" id="catalog">
+
+      <div class="popular__texture" aria-hidden="true"></div>
+
+      <div class="popular__ornament-wrap" aria-hidden="true">
+        <img
+          class="popular__ornament"
+          src="assets/popular-ornament.png"
+          alt=""
+        >
+      </div>
+
+    </section>
+
+
+    
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
