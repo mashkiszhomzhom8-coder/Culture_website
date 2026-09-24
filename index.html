@@ -14,6 +14,15 @@
 </head>
 <body>
 
+  <header class="site-header">
+    <nav class="site-header__nav" aria-label="Основная навигация">
+      <a href="#hero">Главная</a>
+      <a href="#catalog">Создать своё</a>
+      <a href="#tutorials">Избранное</a>
+      <a href="#about">Личный кабинет</a>
+    </nav>
+  </header>
+
   <main>
     <!--
       Пока боковые коллажи сделаны двумя PNG из нашего референса.
@@ -90,7 +99,7 @@
             для твоих творческих проектов
           </p>
 
-          <a class="hero__button" href="#catalog">
+          <a class="hero__button" href="#tutorials">
             <span>✦</span>
             НАЙТИ ИДЕЮ
             <span>✦</span>
@@ -292,6 +301,217 @@
       </div>
 
     </section>
+
+    <section class="tutorials" id="tutorials">
+      <div class="tutorials__canopy" aria-hidden="true">
+        <img src="assets/bushes.png" alt="">
+      </div>
+
+      <div class="tutorials__inner">
+        <form class="tutorials__controls" role="search">
+          <label class="tutorials__search">
+            <span class="sr-only">Поиск туториалов</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"></circle><path d="m16 16 4.3 4.3"></path></svg>
+            <input type="search" placeholder="Найти идею или мастер-класс">
+          </label>
+          <button class="tutorials__filter" type="button" aria-expanded="false" aria-controls="tutorial-filter-panel">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4"></path></svg>
+            ФИЛЬТРЫ
+          </button>
+        </form>
+
+        <aside class="tutorials__filter-panel" id="tutorial-filter-panel" aria-label="Параметры фильтрации" hidden>
+          <label>
+            <span>СЛОЖНОСТЬ</span>
+            <select name="difficulty">
+              <option value="any">Любая</option>
+              <option value="easy">Легко</option>
+              <option value="medium">Средне</option>
+              <option value="hard">Сложно</option>
+            </select>
+          </label>
+          <label>
+            <span>ВРЕМЯ</span>
+            <select name="duration">
+              <option value="any">Любое</option>
+              <option value="under-60">До 1 часа</option>
+              <option value="60-120">1–2 часа</option>
+              <option value="over-120">Больше 2 часов</option>
+            </select>
+          </label>
+          <label>
+            <span>БЮДЖЕТ</span>
+            <select name="budget">
+              <option value="any">Любой</option>
+              <option value="under-500">До 500 ₽</option>
+              <option value="500-1000">500–1 000 ₽</option>
+              <option value="over-1000">От 1 000 ₽</option>
+            </select>
+          </label>
+          <button type="button">СБРОСИТЬ ФИЛЬТРЫ</button>
+        </aside>
+
+        <div class="tutorials__chips" aria-label="Категории">
+          <button class="is-active" type="button">ВСЕ</button>
+          <button type="button">ОДЕЖДА</button>
+          <button type="button">АКСЕССУАРЫ</button>
+          <button type="button">ДЛЯ ДОМА</button>
+          <button type="button">ТЕКСТИЛЬ</button>
+          <button type="button">КЕРАМИКА</button>
+          <button type="button">ПОДАРКИ</button>
+        </div>
+
+        <div class="tutorials__grid">
+          <article class="tutorial-card" data-category="аксессуары" data-difficulty="medium" data-duration="90" data-budget="700">
+            <img src="assets/bracelet_tut.png" alt="Бархатный браслет с царской вышивкой">
+            <div class="tutorial-card__body">
+              <p class="tutorial-card__category">АКСЕССУАРЫ</p>
+              <h3>Бархатный браслет с царской вышивкой</h3>
+              <div class="tutorial-card__meta"><span>1 ЧАС 30 МИН</span><span>≈ 700 ₽</span><span>СРЕДНЕ</span></div>
+              <button type="button" aria-label="Сохранить туториал Бархатный браслет с царской вышивкой">♡</button>
+            </div>
+          </article>
+          <article class="tutorial-card" data-category="одежда" data-difficulty="hard" data-duration="180" data-budget="2500">
+            <img src="assets/dress_tut.png" alt="Платье с татарским орнаментом">
+            <div class="tutorial-card__body">
+              <p class="tutorial-card__category">ОДЕЖДА</p>
+              <h3>Платье с татарским орнаментом</h3>
+              <div class="tutorial-card__meta"><span>3 ЧАСА</span><span>≈ 2 500 ₽</span><span>СЛОЖНО</span></div>
+              <button type="button" aria-label="Сохранить туториал Платье с татарским орнаментом">♡</button>
+            </div>
+          </article>
+          <article class="tutorial-card" data-category="аксессуары" data-difficulty="easy" data-duration="45" data-budget="400">
+            <img src="assets/foot_tut.png" alt="Анклет по марийским мотивам">
+            <div class="tutorial-card__body">
+              <p class="tutorial-card__category">АКСЕССУАРЫ</p>
+              <h3>Анклет по марийским мотивам</h3>
+              <div class="tutorial-card__meta"><span>45 МИН</span><span>≈ 400 ₽</span><span>ЛЕГКО</span></div>
+              <button type="button" aria-label="Сохранить туториал Анклет по марийским мотивам">♡</button>
+            </div>
+          </article>
+          <article class="tutorial-card" data-category="одежда" data-difficulty="hard" data-duration="180" data-budget="2800">
+            <img src="assets/jacket_tut.png" alt="Жакет с калужской вышивкой">
+            <div class="tutorial-card__body">
+              <p class="tutorial-card__category">ОДЕЖДА</p>
+              <h3>Жакет с калужской вышивкой</h3>
+              <div class="tutorial-card__meta"><span>3 ЧАСА</span><span>≈ 2 800 ₽</span><span>СЛОЖНО</span></div>
+              <button type="button" aria-label="Сохранить туториал Жакет с калужской вышивкой">♡</button>
+            </div>
+          </article>
+          <article class="tutorial-card" data-category="одежда" data-difficulty="medium" data-duration="120" data-budget="1800">
+            <img src="assets/jeans_tut.png" alt="Джинсы с торжокским золотым шитьём">
+            <div class="tutorial-card__body">
+              <p class="tutorial-card__category">ОДЕЖДА</p>
+              <h3>Джинсы с торжокским золотым шитьём</h3>
+              <div class="tutorial-card__meta"><span>2 ЧАСА</span><span>≈ 1 800 ₽</span><span>СРЕДНЕ</span></div>
+              <button type="button" aria-label="Сохранить туториал Джинсы с торжокским золотым шитьём">♡</button>
+            </div>
+          </article>
+          <article class="tutorial-card" data-category="для дома" data-difficulty="easy" data-duration="60" data-budget="900">
+            <img src="assets/notecase_tut.png" alt="Чехол для ноутбука с национальным орнаментом">
+            <div class="tutorial-card__body">
+              <p class="tutorial-card__category">ДЛЯ ДОМА</p>
+              <h3>Чехол для ноутбука с национальным орнаментом</h3>
+              <div class="tutorial-card__meta"><span>1 ЧАС</span><span>≈ 900 ₽</span><span>ЛЕГКО</span></div>
+              <button type="button" aria-label="Сохранить туториал Чехол для ноутбука с национальным орнаментом">♡</button>
+            </div>
+          </article>
+          <article class="tutorial-card" data-category="аксессуары" data-difficulty="medium" data-duration="90" data-budget="600">
+            <img src="assets/pin_tut.png" alt="Брошь по мотивам чукотского костюма">
+            <div class="tutorial-card__body">
+              <p class="tutorial-card__category">АКСЕССУАРЫ</p>
+              <h3>Брошь по мотивам чукотского костюма</h3>
+              <div class="tutorial-card__meta"><span>1 ЧАС 30 МИН</span><span>≈ 600 ₽</span><span>СРЕДНЕ</span></div>
+              <button type="button" aria-label="Сохранить туториал Брошь по мотивам чукотского костюма">♡</button>
+            </div>
+          </article>
+          <article class="tutorial-card" data-category="аксессуары" data-difficulty="medium" data-duration="90" data-budget="600">
+            <img src="assets/pin2_tut.png" alt="Брошь по мотивам калмыцкого костюма">
+            <div class="tutorial-card__body">
+              <p class="tutorial-card__category">АКСЕССУАРЫ</p>
+              <h3>Брошь по мотивам калмыцкого костюма</h3>
+              <div class="tutorial-card__meta"><span>1 ЧАС 30 МИН</span><span>≈ 600 ₽</span><span>СРЕДНЕ</span></div>
+              <button type="button" aria-label="Сохранить туториал Брошь по мотивам калмыцкого костюма">♡</button>
+            </div>
+          </article>
+          <article class="tutorial-card" data-category="керамика" data-difficulty="medium" data-duration="120" data-budget="1100">
+            <img src="assets/teapot_tut.png" alt="Чайник с витражной народной росписью">
+            <div class="tutorial-card__body">
+              <p class="tutorial-card__category">КЕРАМИКА</p>
+              <h3>Чайник с витражной народной росписью</h3>
+              <div class="tutorial-card__meta"><span>2 ЧАСА</span><span>≈ 1 100 ₽</span><span>СРЕДНЕ</span></div>
+              <button type="button" aria-label="Сохранить туториал Чайник с витражной народной росписью">♡</button>
+            </div>
+          </article>
+          <article class="tutorial-card" data-category="текстиль" data-difficulty="medium" data-duration="120" data-budget="1000">
+            <img src="assets/top_tut.png" alt="Топ с татарской вышивкой гладью">
+            <div class="tutorial-card__body">
+              <p class="tutorial-card__category">ТЕКСТИЛЬ</p>
+              <h3>Топ с татарской вышивкой гладью</h3>
+              <div class="tutorial-card__meta"><span>2 ЧАСА</span><span>≈ 1 000 ₽</span><span>СРЕДНЕ</span></div>
+              <button type="button" aria-label="Сохранить туториал Топ с татарской вышивкой гладью">♡</button>
+            </div>
+          </article>
+          <article class="tutorial-card" data-category="текстиль" data-difficulty="hard" data-duration="150" data-budget="1300">
+            <img src="assets/top_tut2.png" alt="Топ с объёмной национальной вышивкой">
+            <div class="tutorial-card__body">
+              <p class="tutorial-card__category">ТЕКСТИЛЬ</p>
+              <h3>Топ с объёмной национальной вышивкой</h3>
+              <div class="tutorial-card__meta"><span>2 ЧАСА 30 МИН</span><span>≈ 1 300 ₽</span><span>СЛОЖНО</span></div>
+              <button type="button" aria-label="Сохранить туториал Топ с объёмной национальной вышивкой">♡</button>
+            </div>
+          </article>
+          <article class="tutorial-card" data-category="подарки" data-difficulty="easy" data-duration="60" data-budget="500">
+            <img src="assets/wool_tut.png" alt="Ватные украшения в русском стиле">
+            <div class="tutorial-card__body">
+              <p class="tutorial-card__category">ПОДАРКИ</p>
+              <h3>Ватные украшения в русском стиле</h3>
+              <div class="tutorial-card__meta"><span>1 ЧАС</span><span>≈ 500 ₽</span><span>ЛЕГКО</span></div>
+              <button type="button" aria-label="Сохранить туториал Ватные украшения в русском стиле">♡</button>
+            </div>
+          </article>
+        </div>
+        <p class="tutorials__empty" role="status" aria-live="polite" hidden>
+          По этим параметрам пока ничего не найдено.
+        </p>
+      </div>
+    </section>
+
+    <div class="project-footer__board" aria-hidden="true"></div>
+
+    <footer class="project-footer" id="about">
+      <img class="project-footer__flowers project-footer__flowers--left" src="assets/flowers_left.png" alt="" aria-hidden="true">
+      <img class="project-footer__flowers project-footer__flowers--right" src="assets/flowers_right.png" alt="" aria-hidden="true">
+
+      <div class="project-footer__inner">
+        <div class="project-footer__title" aria-hidden="true">
+          <span></span><b>✧</b><span></span>
+        </div>
+        <p class="project-footer__script">об истоках</p>
+
+        <div class="project-footer__content">
+          <div class="project-footer__about">
+            <p class="project-footer__name">✺ &nbsp;«Истоки» <em>Традиции и ремесло</em></p>
+            <div class="project-footer__info-row">
+              <p>Платформа объединяет мастеров, этнографов и энтузиастов ручного труда. Мы переосмысляем аутентичные орнаменты и традиционные ремёсла для современного быта.</p>
+
+              <nav class="project-footer__nav" aria-label="Разделы проекта">
+                <a href="#tutorials">Собрание мастер-классов</a>
+                <a href="#tutorials">Избранное</a>
+                <a href="#catalog">Мастерская</a>
+                <a href="#hero">Личный кабинет</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-footer__divider" aria-hidden="true"><span>✧</span></div>
+        <div class="project-footer__bottom">
+          <p>© 2026 Платформа «Истоки». Бережное отношение к традициям и культурному наследию.</p>
+          <p>Сделано с уважением к народным ремёслам &nbsp;✦</p>
+        </div>
+      </div>
+    </footer>
 
 
     
